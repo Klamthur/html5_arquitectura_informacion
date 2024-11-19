@@ -13,26 +13,35 @@
     <header>
       <h1>Novela gráfica</h1>
       <form action="Registro_Mang@taku.com" method="post">
-        <input type="text" name="nombre" placeholder="nombre completo" />
-        <input type="email" name="correo" placeholder="correo electronico" />
-        <input type="password" name="contraseña" placeholder="contraseña" />
-        <input type="date" name="fecha_nacimiento" />
-        <select name="manga">
-          <option value="elige_tu_manga">elige tu manga</option>
-          <option value="Solo_leveling">Solo leveling</option>
-          <option value="Nigromante_yo_soy_la_plaga">
-            Nigromante ¡yo soy la plaga!
-          </option>
-          <option value="Emperador_Magico">Emperador Magico</option>
-          <option value="Roman_demonio">Roman demonio</option>
-          <option value="Nivelando_con_los_dioses">
-            Nivelando con los dioses
-          </option>
-          <option value="Sobreviviendo_al_juego_siendo_un_barbaro">
-            Sobreviviendo al juego siendo un barbaro
-          </option>
-        </select>
-        <input type="submit" value="registrarse" />
+        <fieldset>
+          <legend>Información personal</legend>
+          <input type="text" name="nombre" placeholder="nombre completo" />
+          <input type="date" name="fecha_nacimiento" />
+          <input type="email" name="correo" placeholder="correo electronico" />
+        </fieldset>
+        <fieldset>
+          <legend>Contraseña</legend>
+          <input type="password" name="contraseña" placeholder="contraseña" />
+          <input
+            type="password"
+            name="contraseña"
+            placeholder="confirmar contraseña"
+          />
+        </fieldset>
+        <fieldset>
+          <legend>Elige</legend>
+          <input list="manga" name="elige_tu_manga" placeholder="elige tu manga">
+          <datalist id="manga">
+            <option value="Solo leveling"></option>
+            <option value="Nigromante ¡yo soy la plaga!"></option>
+            <option value="Emperador Mágico"></option>
+            <option value="Roman demonio"></option>
+            <option value="Nivelando con los dioses"></option>
+            <option value="Sobreviviendo al juego siendo un bárbaro"></option>
+            </datalist>
+          </input>
+          <input type="submit" value="registrarse" />
+        </fieldset>
       </form>
     </header>
     <main>
